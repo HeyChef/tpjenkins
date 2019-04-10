@@ -2,12 +2,24 @@ package fr.epsi.eboutique.business.entity;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="marque")
 public class Marque {
 
+	@Id
+	@Column(name="id")
   private Long identifier;
   
+	@Column(name="libelle")
   private String libelle;
   
+	@OneToMany(mappedBy="marque")
   private List<Produit> produits;
 
   public Long getIdentifier() {

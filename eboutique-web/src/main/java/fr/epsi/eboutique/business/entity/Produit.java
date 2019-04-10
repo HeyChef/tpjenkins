@@ -2,19 +2,46 @@ package fr.epsi.eboutique.business.entity;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+@Entity
+@Table(name="produit")
 public class Produit {
 
+	@Id
+	@Column(name="id")
   private Long identifier;
   
+	@Column(name="libelle")
   private String libelle;
   
+	@Column(name="description")
   private String description;
   
+	@Column(name="prix")
   private BigDecimal prix;
   
+	@ManyToOne
+	@JoinColumn(name="marque_id")
   private Marque marque;
 
-  public Long getIdentifier() {
+	@Column(name="image")
+	  private String image;
+	
+  public String getImage() {
+		return image;
+	}
+
+	public void setImage(String image) {
+		this.image = image;
+	}
+
+public Long getIdentifier() {
     return identifier;
   }
 

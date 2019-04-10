@@ -4,10 +4,60 @@
 	vertical-align: middle;
 }
 
+.logo{
+	width : 6%;
+}
+
 .main-navbar {
 	background-color: #282828;
 }
 
 .main-navbar a {
 	color: white;
+}
+
+.product-container {
+	margin-bottom: 10px;
+	padding : 10px 10px 10px 10px;
+	color:  #800000;	
+}
+
+.product-container:nth-of-type(odd) {
+background-color: #cccccc;
+}
+    
+.product-container:nth-of-type(even) {
+background-color:#fff;
+}
+
+
+.marque-div {
+	font-size:10px;
+	color : black;
+}
+
+.prix-div {
+	font-size:30px;
+}
+
+header {
+	margin-bottom: 20px;
+}
+
+.search-header {
+		margin-top : 10px;
+		font-size : 40px;
+		width: 100%;
+		text-align : center;
+}
+
+.search-div {
+	display : table;
+	width : 100%;
+	margin-top: 20px;
+}
+
+input {
+	display:table-cell; 
+	width:100%
 }
