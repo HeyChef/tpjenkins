@@ -3,31 +3,12 @@ package fr.epsi.eboutique.business.entity;
 import java.io.Serializable;
 import java.util.Objects;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-
+@SuppressWarnings("serial")
 public class CommandeLignePK implements Serializable {
 
-	@ManyToOne
-	@JoinColumn(name = "commande_id")
-	private Commande commande;
+	private Long commande;
 
-	@ManyToOne
-	@JoinColumn(name = "produit_id")
-	private Produit produit;
-
-	public Produit getProduit() {
-		return produit;
-	}
-
-	public void setProduit(Produit produit) {
-		this.produit = produit;
-	}
+	private Long produit;
 
 	@Override
 	public boolean equals(Object o) {
@@ -35,10 +16,10 @@ public class CommandeLignePK implements Serializable {
 			return true;
 		if (o == null || getClass() != o.getClass())
 			return false;
-		CommandeLignePK commandeId1 = (CommandeLignePK) o;
-		if (commande != commandeId1.commande)
+		CommandeLignePK commandeLigneId1 = (CommandeLignePK) o;
+		if (commande != commandeLigneId1.commande)
 			return false;
-		return produit == commandeId1.produit;
+		return produit == commandeLigneId1.produit;
 	}
 
 	@Override

@@ -3,8 +3,6 @@ package fr.epsi.eboutique.web.controller.site;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -47,7 +45,7 @@ public class MobileController {
 
 		CommandeLigne commandeLigne = new CommandeLigne();
 		Produit produit = this.produitService.findById(id);
-				
+
 		commandeLigne.setQuantite(quantite);
 		commandeLigne.setProduit(produit);
 
