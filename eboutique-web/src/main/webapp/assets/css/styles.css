@@ -16,21 +16,21 @@
 	color: white;
 }
 
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
 .product-container {
 	margin-bottom: 10px;
 	padding : 10px 10px 10px 10px;
 	color:  #800000;	
-		text-decoration:none;
+	text-decoration:none;
 }
 
-.product-container:nth-of-type(odd) {
-background-color: #cccccc;
+.product-container:hover {
+	background-color: #EEEEEE;
 }
-    
-.product-container:nth-of-type(even) {
-background-color:#fff;
-}
-
 
 .marque-div {
 	font-size:10px;
@@ -68,10 +68,6 @@ header {
 input {
 	display:table-cell; 
 	width:100%
-}
-
-a :hover{
-	text-decoration:none;
 }
 
 .product-title {
