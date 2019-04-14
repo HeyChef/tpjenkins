@@ -1,8 +1,6 @@
 package fr.epsi.eboutique.web.controller.site;
 
 import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import javax.inject.Inject;
@@ -13,7 +11,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import fr.epsi.eboutique.business.entity.Marque;
 import fr.epsi.eboutique.business.entity.Produit;
 import fr.epsi.eboutique.business.service.MarqueService;
 import fr.epsi.eboutique.business.service.ProduitService;
@@ -25,13 +22,7 @@ public class AccueilController {
   private MarqueService marqueService;
   @Inject
   private ProduitService produitService;
-  
-  /**
-   * Permet d'afficher la page d'accueil
-   * 
-   * @param critere Critere de reccherche
-   * @return
-   */
+
   @GetMapping("/accueil")
   public ModelAndView displayAccueil(@RequestParam(value = "critere", required = false) String critere) {
     ModelAndView mv = new ModelAndView("public/accueil");
@@ -70,6 +61,5 @@ public class AccueilController {
     
     return mv;
   }
-  
   
 }

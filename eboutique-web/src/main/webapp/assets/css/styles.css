@@ -20,6 +20,7 @@
 	margin-bottom: 10px;
 	padding : 10px 10px 10px 10px;
 	color:  #800000;	
+		text-decoration:none;
 }
 
 .product-container:nth-of-type(odd) {
@@ -57,7 +58,41 @@ header {
 	margin-top: 20px;
 }
 
+.mobilePicture {
+	width : 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 input {
 	display:table-cell; 
 	width:100%
+}
+
+a :hover{
+	text-decoration:none;
+}
+
+.product-title {
+		color:  #800000;
+		font-size : 50px;
+		margin-bottom: 20px;
+}
+
+.product-price {
+		font-size : 30px;
+		margin-bottom: 10px;
+}
+
+.product-libelle {
+		color:  #800000;
+		font-size : 15px;
+		margin-bottom: 10px;
+}
+
+.product-description {
+		color:  black;
+		font-size : 20px;
+		margin-bottom: 40px;
 }

@@ -28,20 +28,22 @@
 				<div class="col-md-10">
 				<c:out value="${errorMessage}"/>
 			        <c:forEach var="produit" items="${produits}">
-			        	<div class="product-container">
-				        	<div class="row">
-					        	<div class="col-md-3">
-						      		<img src='<c:out value="${produit.image}"/>'/>
-					        	</div>
-					        	<div class="col-md-7">
-					        		<c:out value="${produit.libelle}"/>
-			        				<div class="marque-div">Par <c:out value="${produit.marque.getLibelle()}"/></div>
-			        			</div>
-								<div class="col-md-2">
-			        				<div class="prix-div"><c:out value="${produit.prix}"/> €</div>
-			        			</div>
-	        				</div>
-	        			</div>
+			        	<a href="<%=request.getContextPath()%>/mobile/${produit.identifier}">
+				        	<div class="product-container">
+					        	<div class="row">
+						        	<div class="col-md-3">
+							      		<img src='<c:out value="${produit.image}"/>'/>
+						        	</div>
+						        	<div class="col-md-7">
+						        		<c:out value="${produit.libelle}"/>
+				        				<div class="marque-div">Par <c:out value="${produit.marque.getLibelle()}"/></div>
+				        			</div>
+									<div class="col-md-2">
+				        				<div class="prix-div"><c:out value="${produit.prix}"/> €</div>
+				        			</div>
+		        				</div>
+		        			</div>
+	        			</a>
 	      			</c:forEach>			
       			</div>
 			</div>

@@ -26,4 +26,8 @@ public class ProduitService {
 	  public Collection<Produit> findByMarque(String marque) {
 		    return this.produitDao.findByMarque(marque);
 	  }
+	  
+	  public Produit findById(Long id) {
+		    return this.produitDao.findById(id);
+	  }
 }

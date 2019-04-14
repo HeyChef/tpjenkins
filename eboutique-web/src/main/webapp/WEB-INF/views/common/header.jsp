@@ -1,5 +1,8 @@
 <%@ page isELIgnored="false"  %>
 <%@ taglib uri = "http://java.sun.com/jstl/core_rt" prefix = "c" %>
+<%@ page import="fr.epsi.eboutique.business.entity.Commande" %>
+<% Commande commande = (Commande) session.getAttribute("commande"); %>
+
 <header class="header-section">
 	<div class="header-top">
 		<a href="<%=request.getContextPath()%>/accueil">
@@ -19,6 +22,9 @@
 		        <c:forEach var="marque" items="${marques}">
         				<a class="nav-link" href="<%=request.getContextPath()%>/accueil/${marque.libelle}"><c:out value="${marque.libelle}"/></a>
       			</c:forEach>
+      			<c:if test="${not empty commande}">
+       				<a class="nav-link" href="<%=request.getContextPath()%>/commande">Panier</a>
+      			</c:if>
 			</nav>
 		</div>
 	</nav>

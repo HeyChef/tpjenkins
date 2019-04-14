@@ -1,26 +1,26 @@
 package fr.epsi.eboutique.business.entity;
 
 public class CommandeLigne {
+	private Commande commande;
+	
+	private Produit produit;
 
-  private Produit produit;
-  
-  private int quantite;
+	private int quantite;
 
-  public Produit getProduit() {
-    return produit;
-  }
+	public Produit getProduit() {
+		return produit;
+	}
 
-  public void setProduit(Produit produit) {
-    this.produit = produit;
-  }
+	public void setProduit(Produit produit) {
+		this.produit = produit;
+	}
 
-  public int getQuantite() {
-    return quantite;
-  }
+	public int getQuantite() {
+		return quantite;
+	}
 
-  public void setQuantite(int quantite) {
-    this.quantite = quantite;
-  }
-  
-  
+	public void setQuantite(int quantite) {
+		this.quantite = quantite;
+	}
+
 }
