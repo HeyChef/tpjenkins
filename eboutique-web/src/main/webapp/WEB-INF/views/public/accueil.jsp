@@ -35,7 +35,7 @@
 							      		<img src='<c:out value="${produit.image}"/>'/>
 						        	</div>
 						        	<div class="col-md-7">
-						        		<c:out value="${produit.libelle}"/>
+						        		<div class="libelle-div" ><c:out value="${produit.libelle}"/></div>
 				        				<div class="marque-div">Par <c:out value="${produit.marque.getLibelle()}"/></div>
 				        			</div>
 									<div class="col-md-2">

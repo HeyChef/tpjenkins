@@ -22,9 +22,10 @@
 				<div class="col-md-10">
 					<div class="row">
 						<div class="col-md-3"><h2>Votre Panier</h2></div>
-			        	<div class="col-md-5"></div>
-						<div class="col-md-2">Prix</div>
-	        			<div class="col-md-2">Quantité</div>
+			        	<div class="col-md-3"></div>
+						<div class="col-md-2">Quantité</div>
+	        			<div class="col-md-2">Prix</div>
+	        			<div class="col-md-2">Total</div>
 					</div>
 					<hr>
 			        <c:forEach var="commandeLigne" items="${commande.getLignes()}">
@@ -34,21 +35,34 @@
 						        	<div class="col-md-3">
 							      		<img src='<c:out value="${commandeLigne.getProduit().image}"/>'/>
 						        	</div>
-						        	<div class="col-md-5">
-						        		<c:out value="${commandeLigne.getProduit().libelle}"/>
+						        	<div class="col-md-3">
+						        		<div class="libelle-div" ><c:out value="${commandeLigne.getProduit().libelle}"/></div>
 				        				<div class="marque-div">Vendu par <c:out value="${commandeLigne.getProduit().marque.getLibelle()}"/></div>
+				        			</div>
+				        			<div class="col-md-2">
+				        				<div class="prix-div"><c:out value="${commandeLigne.quantite}"/></div>
 				        			</div>
 									<div class="col-md-2">
 				        				<div class="prix-div"><c:out value="${commandeLigne.getProduit().prix}"/> €</div>
 				        			</div>
 				        			<div class="col-md-2">
-				        				<div class="prix-div"><c:out value="${commandeLigne.quantite}"/></div>
-				        			</div>
+				        				<div class="prix-div"><c:out value="${commandeLigne.getTotal()}"/> €</div>
+				        			</div>				        			
 		        				</div>
 		        			</div>
 		        			<hr>
 	        			</a>
-	      			</c:forEach>			
+	      			</c:forEach>
+	      			<div class="row">
+						<div class="col-md-3"><h2>Total :</h2></div>
+			        	<div class="col-md-3"></div>
+						<div class="col-md-2"></div>
+	        			<div class="col-md-2"></div>
+	        			<div class="col-md-2 prix-div"><c:out value="${commande.getTotal()}"/> €</div>
+					</div>
+					<form:form action="/eboutique-web/addCommande" method="post">
+						<div class="search-div"><input type="submit" class="btn btn-primary" value="Valider"></div>
+					</form:form>			
       			</div>
 			</div>
 		</div>
