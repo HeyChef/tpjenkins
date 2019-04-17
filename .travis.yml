@@ -1,1 +1,8 @@
 language: java
+
+mvn install
+mvn sonar:sonar \
+  -Dsonar.projectKey=HeyChef_Ecommerce \
+  -Dsonar.organization=heychef-github \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=0511c56f47cf52740215000a6418235e32503346
