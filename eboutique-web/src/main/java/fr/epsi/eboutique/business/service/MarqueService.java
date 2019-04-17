@@ -12,15 +12,15 @@ import fr.epsi.eboutique.business.entity.Marque;
 @Named
 public class MarqueService {
 
-  @Inject
-  private MarqueDao marqueDao;
+	@Inject
+	private MarqueDao marqueDao;
 
-  public Collection<Marque> findAll() {
-    return this.marqueDao.findAll();
-  }
+	public Collection<Marque> findAll() {
+		return this.marqueDao.findAll();
+	}
 
-  public Optional<Marque> findByLibelle(String marque) {
-    return null;
-  }
+	public Optional<Marque> findByLibelle(String marque) {
+		return null;
+	}
 
 }

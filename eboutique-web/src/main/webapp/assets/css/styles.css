@@ -4,10 +4,96 @@
 	vertical-align: middle;
 }
 
+.logo{
+	width : 6%;
+}
+
 .main-navbar {
 	background-color: #282828;
 }
 
 .main-navbar a {
 	color: white;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+.product-container {
+	margin-bottom: 10px;
+	padding : 10px 10px 10px 10px;
+	color:  #800000;	
+	text-decoration:none;
+}
+
+.product-container:hover {
+	background-color: #EEEEEE;
+}
+
+.marque-div {
+	font-size:20px;
+	color : black;
+}
+
+.prix-div {
+	font-size:30px;
+}
+
+.libelle-div {
+	font-size:30px;
+	margin-bottom: 10px;
+}
+
+header {
+	margin-bottom: 20px;
+}
+
+.search-header {
+		margin-top : 10px;
+		font-size : 40px;
+		width: 100%;
+		text-align : center;
+}
+
+.search-div {
+	display : table;
+	width : 100%;
+	margin-top: 20px;
+}
+
+.mobilePicture {
+	width : 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+input {
+	display:table-cell; 
+	width:100%
+}
+
+.product-title {
+		color:  #800000;
+		font-size : 50px;
+		margin-bottom: 20px;
+}
+
+.product-price {
+		font-size : 30px;
+		margin-bottom: 10px;
+}
+
+.product-libelle {
+		color:  #800000;
+		font-size : 15px;
+		margin-bottom: 10px;
+}
+
+.product-description {
+		color:  black;
+		font-size : 20px;
+		margin-bottom: 40px;
 }

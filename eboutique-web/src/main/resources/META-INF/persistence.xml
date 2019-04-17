@@ -3,7 +3,7 @@
   xmlns="http://xmlns.jcp.org/xml/ns/persistence"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-  <persistence-unit name="eboutique-business">
+  <persistence-unit name="eboutique-business" transaction-type="RESOURCE_LOCAL">
 <properties>
       <property name="hibernate.archive.autodetection"
         value="class" />
@@ -14,10 +14,10 @@
       <property name="javax.persistence.jdbc.driver"
         value="com.mysql.jdbc.Driver" />
       <property name="javax.persistence.jdbc.url"
-        value="jdbc:mysql://192.168.99.100:3306/boutique" />
+        value="jdbc:mysql://localhost/boutique" />
       <property name="javax.persistence.jdbc.user" value="root" />
       <property name="javax.persistence.jdbc.password"
-        value="password" />
+        value="" />
       <property name="hibernate.show_sql" value="true" />
       <property name="hibernate.format_sql" value="true" />
 </properties>

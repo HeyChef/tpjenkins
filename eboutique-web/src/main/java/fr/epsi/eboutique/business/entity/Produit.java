@@ -2,57 +2,86 @@ package fr.epsi.eboutique.business.entity;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table( name = "produit" )
 public class Produit {
 
-  private Long identifier;
-  
-  private String libelle;
-  
-  private String description;
-  
-  private BigDecimal prix;
-  
-  private Marque marque;
+    @Id
+    @Column( name = "id" )
+    @GeneratedValue( strategy = GenerationType.IDENTITY )
+    private Long       identifier;
 
-  public Long getIdentifier() {
-    return identifier;
-  }
+    @Column( name = "libelle" )
+    private String     libelle;
 
-  public void setIdentifier(Long identifier) {
-    this.identifier = identifier;
-  }
+    @Column( name = "description" )
+    private String     description;
 
-  public String getLibelle() {
-    return libelle;
-  }
+    @Column( name = "prix" )
+    private BigDecimal prix;
 
-  public void setLibelle(String libelle) {
-    this.libelle = libelle;
-  }
+    @ManyToOne
+    @JoinColumn( name = "marque_id" )
+    private Marque     marque;
 
-  public String getDescription() {
-    return description;
-  }
+    @Column( name = "image" )
+    private String     image;
 
-  public void setDescription(String description) {
-    this.description = description;
-  }
+    public String getImage() {
+        return image;
+    }
 
-  public BigDecimal getPrix() {
-    return prix;
-  }
+    public void setImage( String image ) {
+        this.image = image;
+    }
 
-  public void setPrix(BigDecimal prix) {
-    this.prix = prix;
-  }
+    public Long getIdentifier() {
+        return identifier;
+    }
 
-  public Marque getMarque() {
-    return marque;
-  }
+    public void setIdentifier( Long identifier ) {
+        this.identifier = identifier;
+    }
 
-  public void setMarque(Marque marque) {
-    this.marque = marque;
-  }
-  
-  
+    public String getLibelle() {
+        return libelle;
+    }
+
+    public void setLibelle( String libelle ) {
+        this.libelle = libelle;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription( String description ) {
+        this.description = description;
+    }
+
+    public BigDecimal getPrix() {
+        return prix;
+    }
+
+    public void setPrix( BigDecimal prix ) {
+        this.prix = prix;
+    }
+
+    public Marque getMarque() {
+        return marque;
+    }
+
+    public void setMarque( Marque marque ) {
+        this.marque = marque;
+    }
+
 }
